@@ -61,8 +61,28 @@ public class Array {
         avg = sum/array.length;
         return  avg;
     }
+    public void bubleSort() {
+        for (int out = array.length - 1; out >= 1; out--){
+            for (int in = 0; in < out; in++){
+                if(array[in] > array[in + 1]) {
+                    double tmp = array[in];
+                    array[in] = array[in + 1];
+                    array[in+1] = tmp;
+                }
+                }
 
-}
+            }
+        }
+
+    public void showArray() {
+        for(int i = 0; i < array.length; i++) {
+            System.out.println("\t" +array[i]);
+        }
+        }
+    }
+
+
+
 
 
 

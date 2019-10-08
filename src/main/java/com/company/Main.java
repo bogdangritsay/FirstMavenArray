@@ -22,17 +22,22 @@ public class Main {
 
         Array object1 = new Array(massiv);
 
+        System.out.println("Array: \n");
+        object1.showArray();
         System.out.println("Select what you want to see: \n\t " +
 
                 "1 - Maximal element of array\n\t " +
                 "2 - Minimal element of array\n\t " +
                 "3 - Calculate the average value of array elements\n\t" +
                 "4 - Calculate the summary of array elements\n\t" +
-                "5 - Calculate the multiplication of array elements\n" +
+                "5 - Calculate the multiplication of array elements\n\t" +
+                "6 - Sort the array \n" +
                 "Type the number of choice: ");
 
 
         int choice = in.nextInt();      // здесь нужно сделать проверку на Exception
+
+
 
         switch (choice) {
             case (1):
@@ -49,6 +54,10 @@ public class Main {
                 break;
             case (5):
                 System.out.println("Calculated multiplication of array elements: " + object1.calcMulOfElements());
+                break;
+            case (6):
+                object1.bubleSort();
+                object1.showArray();
                 break;
             default:
                 System.out.println("Error of select!");
